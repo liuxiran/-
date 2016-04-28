@@ -2,9 +2,11 @@
 ##js的数据类型
 
 js的数据类型有6种，分别是 Undefined、Null、Boolbean、Number、String(简单类型)和Object(引用类型)
+
 1. Undefined
-*var a               //"undefined",未初始化的变量会自动赋予undefined的值。
-*typeof b            //"undefined",未声明的变量获取类型时，也是undefined。
+
+* var a               //"undefined",未初始化的变量会自动赋予undefined的值。
+* typeof b            //"undefined",未声明的变量获取类型时，也是undefined。
 
 2. Null
 Null类型只有一个特殊值，null，表示一个空对象指针。保存对象的变量在真正保存对象之前，声明为null。
