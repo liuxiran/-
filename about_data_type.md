@@ -53,7 +53,7 @@ Null类型只有一个特殊值，null，表示一个空对象指针。保存对
   | "[object Function]" | Object.prototype.toString.call(function(){})     |
   | "[object Boolean]"  | Object.prototype.toString.call(true)             |
   | "[object Undefined]"| Object.prototype.toString.call(undefined)        |
- * instanceof：二元运算符，用来判断左边对象是否是右边类的实例，本意是用来处理复杂关系继承的运算，但可以利用来判断'object'类型的变量的具体类型。
+* instanceof：二元运算符，用来判断左边对象是否是右边类的实例，本意是用来处理复杂关系继承的运算，但可以利用来判断'object'类型的变量的具体类型。
 
    例如：[1,2] instanceof Array  ----> true
 
