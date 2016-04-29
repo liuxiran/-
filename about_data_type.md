@@ -25,15 +25,37 @@ Null类型只有一个特殊值，null，表示一个空对象指针。保存对
 
 ###获取变量数据类型的方法
 
-常用来获取变量数据类型的方法是typeof：是一个一元运算，放在运算数之前，运算数可以是任意类型，返回结果见下表：
+* 常用来获取变量数据类型的方法是typeof：是一个一元运算，放在运算数之前，运算数可以是任意类型，返回结果见下表：
 
-| 返回类型       | 实例                                                                          |
-| ---------------|:-----------------------------------------------------------------------------:|
-| 'underfined'   | typeof 未声明变量、typeof undefined                                           |
-| 'boolbean'     | typeof true、typeof false                                                     |
-| 'string'       | typeof "1"                                                                    |
-| 'number'       | typeof 1 、typeof NaN                                                         |
-| 'object'       | typeof []、typeof {}、typeof null、typeof /^a*/ 、typeof new Date() 等引用类型| 
-| 'function'     | typeof function(){}                                                           |
+  | 返回类型       | 实例                                                                          |
+  | ---------------|:-----------------------------------------------------------------------------:|
+  | 'underfined'   | typeof 未声明变量、typeof undefined                                           |
+  | 'boolbean'     | typeof true、typeof false                                                     |
+  | 'string'       | typeof "1"                                                                    |
+  | 'number'       | typeof 1 、typeof NaN                                                         |
+  | 'object'       | typeof []、typeof {}、typeof null、typeof /^a*/ 、typeof new Date() 等引用类型| 
+  | 'function'     | typeof function(){}                                                           |
+* 对于引用类型的变量来说，typeof运算后得到的都是'object'，进一步区分可以用 Object.prototype.toString.call()方法，返回结果见下表
+
+  | 返回结果           | 使用方法                                         |
+  | -------------------|:------------------------------------------------:|
+  | "[object Array]"   | Object.prototype.toString.call([])               |
+  | "[object RegExp]"  | Object.prototype.toString.call(/^a*/)            |
+  | "[object Object]"  | Object.prototype.toString.call({})               |
+  | "[object Null]"    | Object.prototype.toString.call(null)             |
+  | "[object Date]"    | Object.prototype.toString.call(new Date())       | 
+
+  其他的数据类型用此方法也可以区分，返回结果见下表
+
+  | 返回结果            | 使用方法                                         |
+  | --------------------|:------------------------------------------------:|
+  | "[object Number]"   | Object.prototype.toString.call(45)               |
+  | "[object Function]" | Object.prototype.toString.call(function(){})     |
+  | "[object Boolean]"  | Object.prototype.toString.call(true)             |
+  | "[object Undefined]"| Object.prototype.toString.call(undefined)        |
+ * instanceof：二元运算符，用来判断左边对象是否是右边类的实例，本意是用来处理复杂关系继承的运算，但可以利用来判断'object'类型的变量的具体类型。
+
+   例如：[1,2] instanceof Array  ----> true
+
 
 
