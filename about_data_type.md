@@ -6,6 +6,7 @@ js的数据类型有6种，分别是 Undefined、Null、Boolbean、Number、Stri
 * Undefined
 
   var a               //"undefined",未初始化的变量会自动赋予undefined的值。
+
   typeof b            //"undefined",未声明的变量获取类型时，也是undefined。
 * Null
 Null类型只有一个特殊值，null，表示一个空对象指针。保存对象的变量在真正保存对象之前，声明为null。
@@ -15,7 +16,7 @@ Null类型只有一个特殊值，null，表示一个空对象指针。保存对
   | 数据类型       | 转换为true的值                 | 转化为false的值    |
   | ---------------|:------------------------------:|:------------------:|
   | Boolbean       | true                           | false              |
-  | String         | 任何非空字符串                 | ""                 |
+  | String         | 任何非空字符串                 | " "                |
   | Number         | 任何非零数字值（包括无穷大）   | 0和NaN             |
   | Object         | 任何对象                       | null               |
   | Undefined      | 无                             | undefined          | 
